@@ -1,5 +1,6 @@
 /* styles.css */
 
+/* Définition des variables CSS globales pour les couleurs et la police */
 :root {
   --main-bg: #0d1117;
   --main-color: #c9d1d9;
@@ -9,6 +10,7 @@
   --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Réinitialisation des marges, paddings, box-sizing et comportement du scroll */
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +18,7 @@
   scroll-behavior: smooth;
 }
 
+/* Style général du body */
 body {
   font-family: var(--font-stack);
   background-color: var(--main-bg);
@@ -23,6 +26,7 @@ body {
   line-height: 1.6;
 }
 
+/* En-tête principal */
 header {
   background-color: var(--header-bg);
   padding: 3rem 1rem;
@@ -30,16 +34,19 @@ header {
   border-bottom: 2px solid var(--accent-color);
 }
 
+/* Titre principal dans l'en-tête */
 header h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
+/* Sous-titre dans l'en-tête */
 header p {
   font-size: 1.2rem;
   color: var(--accent-color);
 }
 
+/* Barre de navigation */
 nav {
   display: flex;
   justify-content: center;
@@ -49,6 +56,7 @@ nav {
   border-bottom: 1px solid var(--accent-color);
 }
 
+/* Liens de navigation */
 nav a {
   color: var(--main-color);
   text-decoration: none;
@@ -56,16 +64,19 @@ nav a {
   transition: color 0.3s;
 }
 
+/* Effet au survol des liens de navigation */
 nav a:hover {
   color: var(--accent-color);
 }
 
+/* Contenu principal */
 main {
   padding: 2rem 1rem;
   max-width: 1000px;
   margin: auto;
 }
 
+/* Sections principales */
 section {
   margin-bottom: 4rem;
   background-color: var(--card-bg);
@@ -75,32 +86,39 @@ section {
   transition: transform 0.3s ease;
 }
 
+/* Effet au survol des sections */
 section:hover {
   transform: translateY(-5px);
 }
 
+/* Titres des sections */
 section h2 {
   color: var(--accent-color);
   margin-bottom: 1rem;
 }
 
+/* Listes sans puces */
 ul {
   list-style-type: none;
   padding-left: 0;
 }
 
+/* Espacement entre les éléments de liste */
 ul li {
   margin-bottom: 0.5rem;
 }
 
+/* Style général des liens */
 a {
   color: var(--accent-color);
 }
 
+/* Effet au survol des liens */
 a:hover {
   text-decoration: underline;
 }
 
+/* Pied de page */
 footer {
   text-align: center;
   padding: 2rem;
@@ -110,13 +128,14 @@ footer {
   border-top: 1px solid var(--accent-color);
 }
 
-
+/* Conteneur de la photo de profil */
 .profile-pic {
   display: flex;
   justify-content: center;
   margin-bottom: 1rem;
 }
 
+/* Style de l'image de profil */
 .profile-pic img {
   width: 150px;
   height: 150px;
@@ -126,12 +145,13 @@ footer {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
+/* Section contact avec hauteur minimale */
 #contact {
   min-height: 200px;
   margin-bottom: 4rem;
 }
 
-
+/* Styles responsives pour les écrans de moins de 768px */
 @media (max-width: 768px) {
   nav {
     flex-wrap: wrap;
