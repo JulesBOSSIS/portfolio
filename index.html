@@ -4,8 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfolio de Jules Bossis--Guyon, développeur web junior passionné de cybersécurité. Découvrez ses projets, compétences et parcours.">
   <title>Jules Bossis--Guyon - Développeur Web junior</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -26,7 +29,7 @@
   </nav>
 
   <main>
-    <section id="about">
+    <section id="about" data-aos="fade-up">
       <h2>✨ À propos</h2>
       <p>
         Diplômé d'une licence en informatique de La Rochelle Université, j'ai
@@ -43,7 +46,7 @@
       </p>
     </section>
 
-    <section id="skills">
+    <section id="skills" data-aos="fade-up">
       <h2>🛠️ Compétences</h2>
       <ul>
         <li>
@@ -59,7 +62,46 @@
       </ul>
     </section>
 
-    <section id="projects">
+    <section id="soft-skills" data-aos="fade-up">
+      <h2>🤝 Qualités humaines</h2>
+      <ul>
+        <li>Autonome & rigoureux</li>
+        <li>Bonne capacité d’apprentissage</li>
+        <li>Curieux</li>
+        <li>Aisance à travailler en équipe</li>
+      </ul>
+    </section>
+
+    <section id="experience" data-aos="fade-up">
+      <h2>🧪 Expérience</h2>
+      <ul>
+        <li>
+          <strong>Stage Développeur Web - HYPAquitaine (La Rochelle Université) :</strong><br />
+          Mise en production et sécurisation d'un site web (Fastify, React, Python).<br />
+          Mise en place d'un certificat SSL (Let's Encrypt), gestion des API REST.<br />
+          Documentation technique pour la maintenance du projet.<br />
+          Gestion de la base de données (PostgreSQL).<br />
+          Gestion RGPD (données personnelles).<br />
+          <em>Durée : 2 mois</em>
+        </li>
+      </ul>
+    </section>
+    <section id="education" data-aos="fade-up">
+      <h2>🎓 Formation</h2>
+      <ul>
+        <li>
+          <strong>Licence Informatique - La Rochelle Université :</strong><br />
+          Parcours : Développement Web et IoT<br />
+          <em>2022 - 2025</em>
+        </li>
+        <li>
+          <strong>Baccalauréat général - Lycée Livet - Nantes :</strong><br />
+          Option NSI<br />
+          <em>2019 - 2022</em>
+        </li>
+      </ul>
+    </section>
+    <section id="projects" data-aos="fade-up">
       <h2>💼 Projets</h2>
       <ul>
         <li>
@@ -83,22 +125,7 @@
       </ul>
     </section>
 
-    <section id="experience">
-      <h2>🧪 Expérience</h2>
-      <ul>
-        <li>
-          <strong>Stage Développeur Web – HYPAquitaine (Université de La Rochelle) :</strong><br />
-          Mise en production et sécurisation d’un site web (Fastify, React, Python).<br />
-          Mise en place d’un certificat SSL (Let's Encrypt), gestion des API REST.<br />
-          Documentation technique pour la maintenance du projet.<br />
-          Gestion de la base de données (PostgreSQL).<br />
-          Gestion RGPD (données personnelles).<br />
-          <em>Durée : 2 mois</em>
-        </li>
-      </ul>
-    </section>
-
-    <section id="contact">
+    <section id="contact" data-aos="fade-up">
       <h2>📧 Contact</h2>
       <p>
         Email :
@@ -114,6 +141,13 @@
   <footer>
     <p>&copy; 2025 Jules Bossis--Guyon</p>
   </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      AOS.init();
+    });
+  </script>
 </body>
+
 
 </html>
