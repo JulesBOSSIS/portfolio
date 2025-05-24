@@ -9,9 +9,11 @@ Ce site a été conçu comme un CV interactif pour mettre en avant mes compéten
 
 ## 🔍 À propos
 
-Développeur web junior passionné par la cybersécurité, je suis actuellement à la recherche d’un premier emploi dans le développement web (front ou fullstack).  
-Je travaille avec des technologies modernes comme React, Vite, Symfony et je possède également des bases solides en Android (Java/XML).
-
+Diplômé d'une licence en informatique à La Rochelle Université, j'ai découvert un intérêt particulier pour le
+développement web, notamment côté back-end. Je souhaite aujourd'hui me spécialiser dans ce domaine en intégrant
+une formation professionnalisante pour renforcer mes compétences pratiques.
+Autonome, rigoureux et curieux, je suis motivé par les environnements concrets et la perspective de contribuer à
+des projets web complets, en développant une véritable polyvalence dans l'écosystème web.
 ---
 
 ## 🧰 Stack utilisée
@@ -28,7 +30,7 @@ Je travaille avec des technologies modernes comme React, Vite, Symfony et je pos
 
 - 📫 Contact : bossisguyonjules@gmail.com
 - 🔗 [Mon GitHub](https://github.com/JulesBOSSIS)
-- 🌐 [Site web](lien-vers-ton-deploiement-si-tu-en-as-un)
+- 🌐 [Site web](https://julesbossis.github.io/portfolio/)
 
 ---
 
