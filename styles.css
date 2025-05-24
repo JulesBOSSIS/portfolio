@@ -125,3 +125,21 @@ footer {
   border: 3px solid var(--accent-color);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
+
+#contact {
+  min-height: 200px;
+  margin-bottom: 4rem;
+}
+
+
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 0.5rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+}
