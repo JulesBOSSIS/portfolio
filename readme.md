@@ -10,10 +10,9 @@ Ce site a été conçu comme un CV interactif pour mettre en avant mes compéten
 ## 🔍 À propos
 
 Diplômé d'une licence en informatique à La Rochelle Université, j'ai découvert un intérêt particulier pour le
-développement web, notamment côté back-end. Je souhaite aujourd'hui me spécialiser dans ce domaine en intégrant
-une formation professionnalisante pour renforcer mes compétences pratiques.
+développement web, notamment côté back-end.
 Autonome, rigoureux et curieux, je suis motivé par les environnements concrets et la perspective de contribuer à
-des projets web complets, en développant une véritable polyvalence dans l'écosystème web.
+des projets informatiquescomplets, en développant une véritable polyvalence dans l'écosystème.
 ---
 
 ## 🧰 Stack utilisée
