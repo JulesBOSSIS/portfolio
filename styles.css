@@ -1,168 +1,299 @@
-/* styles.css */
+/* styles.css — version épurée, pro, accessible */
 
-/* Définition des variables CSS globales pour les couleurs et la police */
+/* === Variables (clair/obscur auto) === */
 :root {
-  --main-bg: #0d1117;
-  --main-color: #c9d1d9;
-  --accent-color: #58a6ff;
-  --header-bg: #161b22;
-  --card-bg: #1f2937;
-  --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --bg: #ffffff;
+  --fg: #0b1220;
+  --muted: #5a6472;
+  --accent: #2563eb; /* bleu pro */
+  --accent-contrast: #ffffff;
+  --surface: #f6f8fb; /* cartes claires */
+  --border: #e6eaf0;
+  --shadow: 0 1px 2px rgba(16, 24, 40, 0.06), 0 4px 12px rgba(16, 24, 40, 0.06);
 }
 
-/* Réinitialisation des marges, paddings, box-sizing et comportement du scroll */
+[data-theme="dark"] {
+  --bg: #0d1117;
+  --fg: #e6edf3;
+  --muted: #9aa4b2;
+  --accent: #58a6ff;
+  --accent-contrast: #0b1220;
+  --surface: #111827;
+  --border: #1f2937;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* === Reset doux === */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+}
+html {
   scroll-behavior: smooth;
 }
-
-/* Style général du body */
 body {
-  font-family: var(--font-stack);
-  background-color: var(--main-bg);
-  color: var(--main-color);
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  color: var(--fg);
+  background: var(--bg);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-/* En-tête principal */
+/* === Typographie & rythme vertical === */
+h1,
+h2 {
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+}
+h1 {
+  font-size: clamp(2rem, 2.8vw, 2.75rem);
+  letter-spacing: -0.02em;
+}
+h2 {
+  font-size: clamp(1.35rem, 2vw, 1.6rem);
+  color: var(--fg);
+}
+p,
+li {
+  color: var(--fg);
+}
+small,
+.muted {
+  color: var(--muted);
+}
+
+/* === Layout global === */
 header {
-  background-color: var(--header-bg);
-  padding: 3rem 1rem;
+  background: linear-gradient(180deg, var(--surface), transparent);
+  border-bottom: 1px solid var(--border);
+  padding: 3.5rem 1rem 2.5rem;
   text-align: center;
-  border-bottom: 2px solid var(--accent-color);
 }
-
-/* Titre principal dans l'en-tête */
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Sous-titre dans l'en-tête */
 header p {
-  font-size: 1.2rem;
-  color: var(--accent-color);
+  color: var(--muted);
+  font-weight: 500;
 }
 
-/* Barre de navigation */
 nav {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 50;
   display: flex;
   justify-content: center;
-  background-color: var(--card-bg);
-  padding: 1rem;
-  gap: 2rem;
-  border-bottom: 1px solid var(--accent-color);
+  flex-wrap: wrap;
+  gap: 1rem;
+  backdrop-filter: saturate(120%) blur(6px);
+  background: color-mix(in oklab, var(--bg) 88%, transparent);
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 1rem;
 }
 
-/* Liens de navigation */
 nav a {
-  color: var(--main-color);
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-/* Effet au survol des liens de navigation */
-nav a:hover {
-  color: var(--accent-color);
-}
-
-/* Contenu principal */
-main {
-  padding: 2rem 1rem;
-  max-width: 1000px;
-  margin: auto;
-}
-
-/* Sections principales */
-section {
-  margin-bottom: 4rem;
-  background-color: var(--card-bg);
-  padding: 2rem;
+  color: var(--fg);
+  font-weight: 600;
+  padding: 0.4rem 0.6rem;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+nav a:hover {
+  background: var(--surface);
+}
+nav a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
-/* Effet au survol des sections */
-section:hover {
-  transform: translateY(-5px);
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  color: var(--fg);
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+#theme-toggle:hover {
+  background: var(--surface);
 }
 
-/* Titres des sections */
+main {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+/* === Sections / cartes === */
+section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  margin: 1.25rem 0 1.5rem;
+}
 section h2 {
-  color: var(--accent-color);
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+}
+section p + p {
+  margin-top: 0.75rem;
 }
 
-/* Listes sans puces */
+/* === Listes & puces === */
 ul {
-  list-style-type: none;
-  padding-left: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ul li + li {
+  margin-top: 0.5rem;
 }
 
-/* Espacement entre les éléments de liste */
-ul li {
-  margin-bottom: 0.5rem;
-}
-
-/* Style général des liens */
+/* === Liens === */
 a {
-  color: var(--accent-color);
+  color: var(--accent);
 }
-
-/* Effet au survol des liens */
 a:hover {
   text-decoration: underline;
 }
-
-/* Pied de page */
-footer {
-  text-align: center;
-  padding: 2rem;
-  background-color: var(--header-bg);
-  color: var(--main-color);
-  font-size: 0.9rem;
-  border-top: 1px solid var(--accent-color);
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
-/* Conteneur de la photo de profil */
+/* === Photo de profil === */
 .profile-pic {
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
-
-/* Style de l'image de profil */
 .profile-pic img {
-  width: 150px;
-  height: 150px;
+  width: 128px;
+  height: 128px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid var(--accent-color);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  border: 3px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
-/* Section contact avec hauteur minimale */
-#contact {
-  min-height: 200px;
-  margin-bottom: 4rem;
+/* === Grille Projets === */
+#projects .grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(12, 1fr);
+}
+.project-card {
+  grid-column: span 12;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+.project-card h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+.project-meta {
+  margin: 0.25rem 0 0.75rem;
+  color: var(--muted);
 }
 
-/* Styles responsives pour les écrans de moins de 768px */
-@media (max-width: 768px) {
-  nav {
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1rem 0.5rem;
+/* Badges techno */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--fg);
+}
+
+/* CTA */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.85rem;
+  border-radius: 10px;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  border: 1px solid color-mix(in oklab, var(--accent) 84%, black);
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.05s ease, filter 0.2s ease;
+}
+.cta:hover {
+  filter: brightness(1.05);
+  text-decoration: none;
+}
+.cta:active {
+  transform: translateY(1px);
+}
+
+/* === Sections spécifiques === */
+#skills ul li,
+#soft-skills ul li {
+  color: var(--fg);
+}
+#experience li strong {
+  color: var(--fg);
+}
+#education li strong {
+  color: var(--fg);
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+/* === Responsive === */
+@media (min-width: 680px) {
+  section {
+    padding: 2rem;
   }
+  .project-card {
+    grid-column: span 6;
+  }
+}
+@media (min-width: 980px) {
+  .project-card {
+    grid-column: span 4;
+  }
+}
 
-  nav a {
-    font-size: 0.9rem;
+/* === Impression (CV PDF) === */
+@media print {
+  nav,
+  .profile-pic img,
+  footer {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+    color: #000;
+  }
+  section {
+    break-inside: avoid;
+    box-shadow: none;
+    border-color: #e5e7eb;
   }
 }

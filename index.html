@@ -1,149 +1,254 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio de Jules Bossis--Guyon, développeur web junior passionné de cybersécurité. Découvrez ses projets, compétences et parcours."
+    />
+    <title>Jules Bossis--Guyon - Développeur Web Junior</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Portfolio de Jules Bossis--Guyon, développeur web junior passionné de cybersécurité. Découvrez ses projets, compétences et parcours.">
-  <title>Jules Bossis--Guyon - Développeur Web Junior</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
+  <body>
+    <header>
+      <h1>Jules Bossis--Guyon</h1>
+      <p>Développeur Web Junior – En recherche de stage (4 mois minimum)</p>
+      <div class="profile-pic">
+        <img
+          src="./assets/IMG_0252.jpg"
+          alt="Photo de profil de Jules BOSSIS--GUYON"
+        />
+      </div>
+    </header>
 
-<body>
-  <header>
-    <h1>Jules Bossis--Guyon</h1>
-    <p>Développeur Web Junior – En recherche de stage (4 mois minimum)</p>
-    <div class="profile-pic">
-      <img src="./assets/IMG_0252.jpg" alt="Photo de profil de Jules BOSSIS--GUYON" />
-    </div>
-  </header>
+    <nav>
+      <a href="#about">Profil</a>
+      <a href="#skills">Compétences</a>
+      <a href="#soft-skills">Qualités</a>
+      <a href="#education">Formation</a>
+      <a href="#projects">Projets</a>
+      <a href="#experience">Expérience</a>
+      <a href="#contact">Contact</a>
+      <button id="theme-toggle" aria-label="Changer le thème">🌙</button>
+    </nav>
 
-  <nav>
-    <a href="#about">Profil</a>
-    <a href="#skills">Compétences</a>
-    <a href="#soft-skills">Qualités</a>
-    <a href="#education">Formation</a>
-    <a href="#projects">Projets</a>
-    <a href="#experience">Expérience</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <main>
+      <section id="about" data-aos="fade-up">
+        <h2>✨ Mon profil</h2>
+        <p>
+          Diplômé d'une licence en informatique à La Rochelle Université, je me
+          spécialise dans le développement web avec un intérêt marqué pour la
+          sécurité des applications. Je recherche actuellement un stage de 4
+          mois ou plus pour mettre en pratique mes compétences, relever de
+          nouveaux défis techniques et contribuer à des projets concrets.
+        </p>
+        <p>
+          Autonome, rigoureux et curieux, j’aime travailler sur des projets
+          complets, du back-end au front-end, en portant une attention
+          particulière à la qualité et à la sécurité.
+        </p>
+      </section>
 
-  <main>
-    <section id="about" data-aos="fade-up">
-      <h2>✨ Mon profil</h2>
-      <p>
-        Diplômé d'une licence en informatique à La Rochelle Université, je me spécialise dans le développement web avec un
-        intérêt marqué pour la sécurité des applications.  
-        Je recherche actuellement un stage de 4 mois ou plus pour mettre en pratique mes compétences, relever de nouveaux
-        défis techniques et contribuer à des projets concrets.
-      </p>
-      <p>
-        Autonome, rigoureux et curieux, j’aime travailler sur des projets complets, du back-end au front-end, en portant
-        une attention particulière à la qualité et à la sécurité.
-      </p>
-    </section>
+      <section id="skills" data-aos="fade-up">
+        <h2>🛠️ Compétences</h2>
+        <ul>
+          <li>
+            Langages : HTML, CSS, JavaScript, PHP, Python, C, Bash, Java
+            (Android), XML
+          </li>
+          <li>Frameworks & outils : React, Vite, Symfony</li>
+          <li>Technos : Git, Linux, ESP32, API REST, SQL, PostgreSQL</li>
+          <li>
+            Concepts : Fullstack, cybersécurité, IoT, responsive design, web
+            responsable
+          </li>
+        </ul>
+      </section>
 
-    <section id="skills" data-aos="fade-up">
-      <h2>🛠️ Compétences</h2>
-      <ul>
-        <li>Langages : HTML, CSS, JavaScript, PHP, Python, C, Bash, Java (Android), XML</li>
-        <li>Frameworks & outils : React, Vite, Symfony</li>
-        <li>Technos : Git, Linux, ESP32, API REST, SQL, PostgreSQL</li>
-        <li>Concepts : Fullstack, cybersécurité, IoT, responsive design, web responsable</li>
-      </ul>
-    </section>
+      <section id="soft-skills" data-aos="fade-up">
+        <h2>🤝 Qualités humaines</h2>
+        <ul>
+          <li>Autonome & rigoureux</li>
+          <li>Solide capacité d'apprentissage</li>
+          <li>Curieux</li>
+          <li>Esprit d'équipe</li>
+        </ul>
+      </section>
 
-    <section id="soft-skills" data-aos="fade-up">
-      <h2>🤝 Qualités humaines</h2>
-      <ul>
-        <li>Autonome & rigoureux</li>
-        <li>Solide capacité d'apprentissage</li>
-        <li>Curieux</li>
-        <li>Esprit d'équipe</li>
-      </ul>
-    </section>
+      <section id="experience" data-aos="fade-up">
+        <h2>🧪 Expérience</h2>
+        <ul>
+          <li>
+            <strong
+              >Stage Développeur Web - HYPAquitaine (La Rochelle Université)
+              :</strong
+            ><br />
+            Mise en production et sécurisation d'un site web (Symfony, React +
+            Vite, Python).<br />
+            Certificat SSL (Let's Encrypt), gestion des API REST.<br />
+            Documentation technique, gestion de base de données (PostgreSQL) et
+            conformité RGPD.<br />
+            <em>Durée : 2 mois</em>
+          </li>
+        </ul>
+      </section>
 
-    <section id="experience" data-aos="fade-up">
-      <h2>🧪 Expérience</h2>
-      <ul>
-        <li>
-          <strong>Stage Développeur Web - HYPAquitaine (La Rochelle Université) :</strong><br />
-          Mise en production et sécurisation d'un site web (Symfony, React + Vite, Python).<br />
-          Certificat SSL (Let's Encrypt), gestion des API REST.<br />
-          Documentation technique, gestion de base de données (PostgreSQL) et conformité RGPD.<br />
-          <em>Durée : 2 mois</em>
-        </li>
-      </ul>
-    </section>
+      <section id="education" data-aos="fade-up">
+        <h2>🎓 Formation</h2>
+        <ul>
+          <li>
+            <strong>Licence Informatique - La Rochelle Université :</strong
+            ><br />
+            Parcours Développement Web et IoT<br />
+            <em>2022 - 2025</em>
+          </li>
+          <li>
+            <strong>Baccalauréat général - Lycée Livet - Nantes :</strong><br />
+            Option NSI<br />
+            <em>2019 - 2022</em>
+          </li>
+        </ul>
+      </section>
 
-    <section id="education" data-aos="fade-up">
-      <h2>🎓 Formation</h2>
-      <ul>
-        <li>
-          <strong>Licence Informatique - La Rochelle Université :</strong><br />
-          Parcours Développement Web et IoT<br />
-          <em>2022 - 2025</em>
-        </li>
-        <li>
-          <strong>Baccalauréat général - Lycée Livet - Nantes :</strong><br />
-          Option NSI<br />
-          <em>2019 - 2022</em>
-        </li>
-      </ul>
-    </section>
+      <section id="projects" data-aos="fade-up">
+        <h2>💼 Projets</h2>
+        <p>
+          Davantage sur mon
+          <a href="https://github.com/JulesBOSSIS" target="_blank">GitHub</a>.
+        </p>
 
-    <section id="projects" data-aos="fade-up">
-      <h2>💼 Projets</h2>
-      <p>
-        Retrouvez plus de détails sur mon
-        <a href="https://github.com/JulesBOSSIS" target="_blank">GitHub</a>.
-      </p>
-      <ul>
-        <li>
-          <strong>ETTU – Espace de Travail Technique Unifié :</strong> plateforme collaborative pour développeurs
-          (organisation de notes, snippets, tâches et projets).<br />
-          Backend en Rust + Axum (PostgreSQL, Redis, WebSocket), frontend React + TypeScript + TailwindCSS.
-          <a href="https://github.com/ETTU-org" target="_blank">Voir le projet</a>
-        </li>
-        <li>
-          <strong>CarExp :</strong> plateforme d’achat, vente et location de véhicules – Symfony & Vue.js
-          [<a href="https://github.com/JulesBOSSIS/carexp-l2s4" target="_blank">Code</a>]
-        </li>
-        <li>
-          <strong>Galerie d'art :</strong> vitrine et présentation d’œuvres – React & TypeScript
-          [<a href="https://github.com/JulesBOSSIS/art-gallery" target="_blank">Code</a>]
-        </li>
-        <li>
-          <strong>PassKeeper :</strong> gestionnaire local de mots de passe – React
-          [<a href="https://github.com/JulesBOSSIS/passkeeper" target="_blank">Code</a>]
-        </li>
-        <li>
-          <strong>Application TODO JS :</strong> gestion de tâches avec drag & drop
-        </li>
-        <li>
-          <strong>Projet IoT ESP32 :</strong> capteurs et communication réseau
-        </li>
-      </ul>
-    </section>
+        <div class="grid">
+          <!-- ETTU -->
+          <article class="project-card">
+            <h3>ETTU — Espace de Travail Technique Unifié</h3>
+            <p class="project-meta">
+              Plateforme d’organisation pour développeurs (notes, snippets,
+              tâches, projets).
+            </p>
+            <div class="chips">
+              <span class="chip">Rust (Axum)</span>
+              <span class="chip">PostgreSQL</span>
+              <span class="chip">Redis</span>
+              <span class="chip">WebSocket</span>
+              <span class="chip">React</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">TailwindCSS</span>
+            </div>
+            <p style="margin-top: 0.75rem">
+              <a class="cta" href="https://github.com/ETTU-org" target="_blank"
+                >Voir le code</a
+              >
+            </p>
+          </article>
 
-    <section id="contact" data-aos="fade-up">
-      <h2>📧 Contact</h2>
-      <p>Email : <a href="mailto:bossisguyonjules@gmail.com">bossisguyonjules@gmail.com</a></p>
-      <p>LinkedIn : <a href="https://fr.linkedin.com/in/jules-bossis-guyon" target="_blank">Jules Bossis--Guyon</a></p>
-    </section>
-  </main>
+          <!-- CarExp -->
+          <article class="project-card">
+            <h3>CarExp — Vente & Location</h3>
+            <p class="project-meta">
+              Plateforme d’annonces (achat, vente, location).
+            </p>
+            <div class="chips">
+              <span class="chip">Symfony</span>
+              <span class="chip">Vue.js</span>
+              <span class="chip">PostgreSQL</span>
+            </div>
+            <p style="margin-top: 0.75rem">
+              <a
+                class="cta"
+                href="https://github.com/JulesBOSSIS/carexp-l2s4"
+                target="_blank"
+                >Voir le code</a
+              >
+            </p>
+          </article>
 
-  <footer>
-    <p>&copy; 2025 Jules Bossis--Guyon</p>
-  </footer>
+          <!-- Galerie d'art -->
+          <article class="project-card">
+            <h3>Galerie d’art — Vitrine</h3>
+            <p class="project-meta">Présentation d’œuvres, design épuré.</p>
+            <div class="chips">
+              <span class="chip">React</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">Vite</span>
+            </div>
+            <p style="margin-top: 0.75rem">
+              <a
+                class="cta"
+                href="https://github.com/JulesBOSSIS/art-gallery"
+                target="_blank"
+                >Voir le code</a
+              >
+            </p>
+          </article>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      AOS.init();
-    });
-  </script>
-</body>
+          <!-- PassKeeper -->
+          <article class="project-card">
+            <h3>PassKeeper — Gestionnaire local</h3>
+            <p class="project-meta">Gestionnaire de mots de passe local.</p>
+            <div class="chips">
+              <span class="chip">React</span>
+            </div>
+            <p style="margin-top: 0.75rem">
+              <a
+                class="cta"
+                href="https://github.com/JulesBOSSIS/passkeeper"
+                target="_blank"
+                >Voir le code</a
+              >
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" data-aos="fade-up">
+        <h2>📧 Contact</h2>
+        <p>
+          Email :
+          <a href="mailto:bossisguyonjules@gmail.com"
+            >bossisguyonjules@gmail.com</a
+          >
+        </p>
+        <p>
+          LinkedIn :
+          <a
+            href="https://fr.linkedin.com/in/jules-bossis-guyon"
+            target="_blank"
+            >Jules Bossis--Guyon</a
+          >
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Jules Bossis--Guyon</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        AOS.init();
+      });
+
+      const themeToggle = document.getElementById("theme-toggle");
+
+      // Appliquer le thème choisi précédemment
+      if (localStorage.getItem("theme")) {
+        document.documentElement.setAttribute(
+          "data-theme",
+          localStorage.getItem("theme")
+        );
+      }
+
+      themeToggle.addEventListener("click", () => {
+        let currentTheme = document.documentElement.getAttribute("data-theme");
+        let newTheme = currentTheme === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+        themeToggle.textContent = newTheme === "dark" ? "🌙" : "☀️";
+      });
+    </script>
+  </body>
 </html>
